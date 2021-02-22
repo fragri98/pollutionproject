@@ -1,0 +1,402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333333;
+  scroll-behavior: smooth;
+  background-color: rgba(9,28,5,0.78);
+}
+
+/*HEADER*/
+
+header {
+  background: url("../images/sfondo2.jpg") no-repeat 40% 50%/cover;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header>div.row {
+  justify-content: center;
+  width: 100%;
+}
+
+/*SEARCH BAR*/
+
+form {
+  margin-top: 2rem;
+  background-color: rgba(9,28,5,0.78);
+  padding-top: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.search-row {
+  justify-content: center;
+}
+
+main {
+  display: none;
+  transition: ease-in-out;
+}
+
+input,
+button {
+  height: 50px;
+  border: none;
+  border-radius: 7px;
+}
+
+button {
+  margin-left: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #84BF24;
+}
+
+input,
+input:active,
+input:focus,
+button,
+button:active,
+button:focus {
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+
+form span {
+  display: inline-block;
+  margin-top: 0.9rem;
+  text-align: center;
+}
+
+button:hover,
+.geolocation:hover,
+.know-more:hover {
+  cursor: pointer;
+  color: #567D18;
+}
+
+button:hover {
+  background-color: #567D18;
+}
+
+.result {
+  font-weight: 700;
+}
+
+/*INFO ABOUT GO-GREEN*/
+
+section.informations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSquare {
+  padding: 0;
+  margin: 50px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.infoSquare li {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  border-radius: 20px;
+  padding: 9% 20px;
+  position: relative;
+  vertical-align: top;
+  margin: 10px;
+  background: rgba(9,28,5,0.80);
+  text-align: center;
+}
+
+.infoSquare li h3 {
+  font-size: 30px;
+  color: #b7b7b7;
+  margin-bottom: 20px;
+  font-family: 'Mali', cursive;
+  letter-spacing: 4px;
+  color: #84BF24;
+}
+
+.infoSquare li p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #b7b7b7;
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.infoSquare li:before {
+  content: '';
+  border-radius: 20px;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  z-index: -1;
+}
+
+.infoSquare li:nth-child(1):before{
+  background: #C9FFBF;
+  background: -webkit-linear-gradient(to right, #648483, #C9FFBF);
+  background: linear-gradient(to right, #648483, #C9FFBF);
+}
+
+/*RESULTS*/
+
+.main-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-fluid{
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.results-row {
+  margin-bottom: 20px;
+}
+
+.results-row p {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+}
+
+.results-row img {
+  text-align: center;
+}
+
+span#city,
+span.status {
+  text-transform: uppercase;
+  color: #84BF24;
+}
+
+.moreInfo {
+  background-color: rgba(9,28,5,0.48);
+  border-radius: 13px;
+  padding: 2rem 1rem;
+  width: 80%;
+  background: -webkit-linear-gradient(to right, rgba(9,28,5,0.48), #32470E);
+  background: linear-gradient(to right, rgba(9,28,5,0.48), #32470E);
+
+}
+
+.moreInfo p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 480px) {
+  .infoSquare li p {
+    font-size: 17px;
+  }
+  form {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+
+  .infoSquare li {
+    margin-top: 2rem;
+    min-height: 40vh;
+  }
+
+  .infoSquare li p {
+    font-size: 18px;
+  }
+
+  .infoSquare li:first-child {
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .infoSquare li {
+    min-height: 35vh;
+    max-height: 35vh;
+    padding: 9% 20px;
+    margin-top: 3rem;
+  }
+
+  .infoSquare li:first-child {
+    margin-top: 1rem;
+  }
+
+  .infoSquare li p {
+    font-size: 17px;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+  section.informations {
+    height: 45vh;
+  }
+
+  .infoSquare li {
+    min-height: 35vh;
+    max-height: 35vh;
+    padding: 9% 20px;
+    margin-top: 0;
+  }
+
+  .infoSquare li:first-child {
+    margin-top: 0;
+  }
+
+  .infoSquare li p {
+    font-size: 22px;
+  }
+  .moreInfo p {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .results-row img {
+    max-width: 70%;
+  }
+
+  .main-div {
+    height: 55vh;
+  }
+  .moreInfo p {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+  .results-row img {
+    max-width: 40%;
+  }
+
+  .infoSquare li {
+    padding: 9% 20px;
+    min-height: 35vh;
+    max-height: 35vh;
+  }
+  .moreInfo p {
+    font-size: 20px;
+  }
+}
+}
+
+
+/* thai */
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v4/N0ba2SRONuN4SDnED35yKd7vmA.woff2) format('woff2');
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v4/N0ba2SRONuN4SCLED35yKd7vmA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v4/N0ba2SRONuN4SCPED35yKd7vmA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Mali';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mali/v4/N0ba2SRONuN4SC3ED35yKd4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

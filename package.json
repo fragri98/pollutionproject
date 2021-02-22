@@ -1,0 +1,21 @@
+{
+  "name": "pollutionproject",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "main": "webpack.config.js",
+  "author": "Francesca Grimaldi",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv-webpack": "^6.0.2",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "keywords": [],
+  "description": ""
+}
